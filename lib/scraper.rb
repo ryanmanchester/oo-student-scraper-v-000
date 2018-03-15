@@ -41,7 +41,7 @@ class Scraper
       student_profile[:profile_quote] = profile.css(".profile-quote").children.text
       student_profile[:bio] = profile.css(".details-container").children.css("p").children.text
       student_profile
-      binding.pry
+      #binding.pry
 
 
 
