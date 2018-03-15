@@ -10,7 +10,7 @@ class Scraper
     #location: doc.css(".student-location").children.text
     #profile_url: doc.css(".student-card").children[1].attributes["href"].value
     students_array = []
-    doc.css(".student-cards").each do |student|
+    doc.css(".student-card").each do |student|
 
         binding.pry
       students = {
