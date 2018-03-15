@@ -14,11 +14,11 @@ class Scraper
 
         binding.pry
       students = {
-      :name => ind_student.css(".student-name").text,
-      :location => ind_student.css(".student-location").children.text,
-      :profile_url => ind_student.css(".student-card").children[1].attributes["href"].value
+      :name => student.css(".student-name").text,
+      :location => student.css(".student-location").children.text,
+      :profile_url => student.css(".student-card").children[1].attributes["href"].value
     }
-  
+
 end
 
     students_array << students
