@@ -36,8 +36,11 @@ class Scraper
         :linkedin => social.css(".social-icon-container").children.css("a")[1].attributes["href"].value,
         :github => profile.css(".social-icon-container").children.css("a")[2].attributes["href"].value,
       }
+      end
+      student_profile[:profile_quote] = profile.css(".profile-quote").children.text
+      student_profile[:bio] = profile.css(".details-container").children.css("p").children.text
+      student_profile
 
-    end
 
 
   end
