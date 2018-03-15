@@ -31,7 +31,7 @@ class Scraper
     #bio: profile.css(".details-container").children.css("p").children.text
     student_profile = {}
     profile.css(".social-icon-container a").each do |link|
-      #binding.pry
+      binding.pry
       link_text = link.attribute("href").value
         if link_text.include?("twitter")
           student_profile[:twitter] = link_text
