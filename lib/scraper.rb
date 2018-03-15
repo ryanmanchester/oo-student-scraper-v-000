@@ -29,6 +29,7 @@ class Scraper
     #github:   profile.css(".social-icon-container").children.css("a")[2].attributes["href"].value
     #profile_quote: profile.css(".profile-quote").children.text
     #bio: profile.css(".details-container").children.css("p").children.text
+    student_profile = {}
     profile.css(".vitals-container").each do |social|
       #binding.pry
       student_profile = {
