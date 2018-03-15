@@ -11,7 +11,7 @@ class Scraper
     #profile_url: doc.css(".student-card").children[1].attributes["href"].value OR student.css("a")[0].attributes["href"].value
     students_array = []
     doc.css(".student-card").each do |student|
-      binding.pry
+      #binding.pry
       students = {
       :name => student.css(".student-name").text,
       :location => student.css(".student-location").children.text,
