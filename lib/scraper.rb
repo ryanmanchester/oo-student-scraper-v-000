@@ -19,7 +19,7 @@ class Scraper
       :profile_url => student.css(".student-card").children[1].attributes["href"].value
     }
 
-end
+    end
 
     students_array << students
   end
