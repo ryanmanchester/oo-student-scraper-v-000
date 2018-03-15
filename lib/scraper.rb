@@ -26,7 +26,7 @@ class Scraper
     binding.pry
     #twitter : profile.css(".social-icon-container").children.css("a")[0].attributes["href"].value
     #linkedin: profile.css(".social-icon-container").children.css("a")[1].attributes["href"].value
-    
+    #github:   profile.css(".social-icon-container").children.css("a")[2].attributes["href"].value
 
 
   end
