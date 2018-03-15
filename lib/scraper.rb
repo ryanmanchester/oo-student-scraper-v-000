@@ -8,7 +8,7 @@ class Scraper
     #binding.pry
     #name : doc.css(".student-name").text
     #location: doc.css(".student-location").children.text
-    #profile_url: doc.css(".student-card").children[1].attributes["href"].value
+    #profile_url: doc.css(".student-card").children[1].attributes["href"].value OR student.css("a")[0].attributes["href"].value
     students_array = []
     doc.css(".student-card").each do |student|
 
