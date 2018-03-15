@@ -42,7 +42,7 @@ class Scraper
          if twtr != nil
            student_profile[:twitter] = twtr
          end
-         if lnkd !=
+         
 
       end
       student_profile[:profile_quote] = profile.css(".profile-quote").children.text
