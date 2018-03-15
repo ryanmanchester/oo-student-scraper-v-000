@@ -35,14 +35,18 @@ class Scraper
       link_text = link.attribute("href").value
         if link_text.include?("twitter")
           student_profile[:twitter] = link_text
+
+        elsif link_text.inlcude?("linkedin")
+          student_profile[:linkedin] = link_text
+
+        elsif link_text.include?("github")
+          student_profile[:github] = link_text
+        else
+          link_text
         end
-         twtr = social.children.css("a")[0].attributes["href"].value
-         lnkd = social.children.css("a")[1].attributes["href"].value
-         gh = social.children.css("a")[2].attributes["href"].value
-         if twtr != nil
-           student_profile[:twitter] = twtr
-         end
-         
+
+
+
 
       end
       student_profile[:profile_quote] = profile.css(".profile-quote").children.text
