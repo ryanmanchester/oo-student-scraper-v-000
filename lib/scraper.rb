@@ -22,7 +22,7 @@ class Scraper
   end
 
   def self.scrape_profile_page(profile_url)
-    profile = Nokogiri::HTML(open("fixtures/student-site/students/joe-burgess.html"))
+    profile = Nokogiri::HTML(open(profile_url))
     #binding.pry
     #twitter : profile.css(".social-icon-container").children.css("a")[0].attributes["href"].value
     #linkedin: profile.css(".social-icon-container").children.css("a")[1].attributes["href"].value
@@ -44,18 +44,11 @@ class Scraper
         else
           student_profile[:blog] = link_text
         end
-
-
-
-
       end
       student_profile[:profile_quote] = profile.css(".profile-quote").children.text
       student_profile[:bio] = profile.css(".details-container").children.css("p").children.text
       student_profile
       #binding.pry
-
-
-
-  end
+    end
 
 end
