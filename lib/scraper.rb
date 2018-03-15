@@ -30,13 +30,20 @@ class Scraper
     #profile_quote: profile.css(".profile-quote").children.text
     #bio: profile.css(".details-container").children.css("p").children.text
     student_profile = {}
-    profile.css(".social-icon-container").each do |social|
+    profile.css(".social-icon-container a").each do |link|
       binding.pry
-      student_profile = {
-        :twitter => social.children.css("a")[0].attributes["href"].value,
-        :linkedin => social.children.css("a")[1].attributes["href"].value,
-        :github => social.children.css("a")[2].attributes["href"].value
-      }
+      link_text = link.attribute("href").value
+        if link_text.include?("twitter")
+          student_profile[:twitter] = link_text
+        end
+         twtr = social.children.css("a")[0].attributes["href"].value
+         lnkd = social.children.css("a")[1].attributes["href"].value
+         gh = social.children.css("a")[2].attributes["href"].value
+         if twtr != nil
+           student_profile[:twitter] = twtr
+         end
+         if lnkd !=
+
       end
       student_profile[:profile_quote] = profile.css(".profile-quote").children.text
       student_profile[:bio] = profile.css(".details-container").children.css("p").children.text
