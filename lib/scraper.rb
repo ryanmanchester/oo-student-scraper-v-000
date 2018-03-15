@@ -25,7 +25,9 @@ class Scraper
     profile = Nokogiri::HTML(open("./fixtures/student-site/students/eric-chu.html"))
     binding.pry
     #twitter : profile.css(".social-icon-container").children.css("a")[0].attributes["href"].value
+    #linkedin: profile.css(".social-icon-container").children.css("a")[1].attributes["href"].value
     
+
 
   end
 
