@@ -23,11 +23,16 @@ class Scraper
 
   def self.scrape_profile_page(profile_url)
     profile = Nokogiri::HTML(open("./fixtures/student-site/students/eric-chu.html"))
-    binding.pry
+    #binding.pry
     #twitter : profile.css(".social-icon-container").children.css("a")[0].attributes["href"].value
     #linkedin: profile.css(".social-icon-container").children.css("a")[1].attributes["href"].value
     #github:   profile.css(".social-icon-container").children.css("a")[2].attributes["href"].value
     #profile_quote: profile.css(".profile-quote").children.text
+    #bio: profile.css(".details-container").children.css("p").children.text
+    profile.css(".social-icon-container").each do |social|
+      binding.pry
+
+    end
 
 
   end
