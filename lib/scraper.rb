@@ -36,7 +36,7 @@ class Scraper
         if link_text.include?("twitter")
           student_profile[:twitter] = link_text
 
-        elsif link_text.inlcude?("linkedin")
+        elsif link_text.include?("linkedin")
           student_profile[:linkedin] = link_text
 
         elsif link_text.include?("github")
