@@ -33,9 +33,9 @@ class Scraper
     profile.css(".social-icon-container").each do |social|
       binding.pry
       student_profile = {
-        :twitter => social.css(".social-icon-container").children.css("a")[0].attributes["href"].value,
-        :linkedin => social.css(".social-icon-container").children.css("a")[1].attributes["href"].value,
-        :github => profile.css(".social-icon-container").children.css("a")[2].attributes["href"].value
+        :twitter => social.children.css("a")[0].attributes["href"].value,
+        :linkedin => social.children.css("a")[1].attributes["href"].value,
+        :github => social.children.css("a")[2].attributes["href"].value
       }
       end
       student_profile[:profile_quote] = profile.css(".profile-quote").children.text
