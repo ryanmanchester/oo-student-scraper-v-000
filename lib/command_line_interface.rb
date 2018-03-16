@@ -2,6 +2,7 @@ require_relative "../lib/scraper.rb"
 require_relative "../lib/student.rb"
 require 'nokogiri'
 require 'colorize'
+require 'pry'
 
 class CommandLineInteface
   BASE_PATH = "./fixtures/student-site/"
@@ -25,6 +26,7 @@ class CommandLineInteface
   end
 
   def display_students
+
     Student.all.each do |student|
       puts "#{student.name.upcase}".colorize(:blue)
       puts "  location:".colorize(:light_blue) + " #{student.location}"
